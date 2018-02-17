@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+#body {
+  position: fixed;
+  top: 50px;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+  z-index: 500;
+}
+#body::before, #body::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #edddce;
+}
+
+#body::after {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+}
+
+header {
+  background: #a59393ad;
+  margin: 10px 20px;
+  padding: 10px;
+  font-size: 52px;
+  text-align: center;
+}
+
+#content {
+  overflow: auto;
+  position: fixed;
+  bottom: 50px;
+  top: 180px;
+  left: 50px;
+  right: 50px;
+}
+
+
+
+
+#background-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+#background {
+  /*position: absolute;
+  top: -100%;
+  bottom: -100%;
+  right: -100%;
+  left: -100%;*/
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#backgroundphoto {
+  width: 100vw; 
+  height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+  background: pink;
+  min-height: 100vh;
+  min-width: 177.78vh; /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  top:0;bottom:0; /* vertical center */
+  left:0;right:0; /* horizontal center */
+  /*position: relative;*/
+  background-image: url(background.jpg);
+  background-size: 100%;
+}
+#container {
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+}
+.overlay {
+  background-image: url(background.jpg);
+  background-size: 100%;
+  position: absolute;
+  top:0;bottom:0; /* vertical center */
+  left:0;right:0; /* horizontal center */
+  opacity: 1;
+}
+#fadeoverlay {
+  transition: opacity 1s;
+  transition-delay: 2s;
+  z-index: 100;
+
+}
+#fastoverlay {
+  display: none;
+  z-index: 70;
+}
+iframe {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 50%;
+}
+#fade {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  width: 53.7345513%;
+  height: 57.4085768%;
+}
+
+@media (max-width: 800px) {
+  #backgroundphoto {
+  }
+}
