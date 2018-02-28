@@ -258,6 +258,7 @@ iframe {
 }
 
 @media (max-width: 800px) {
-  #backgroundphoto {
+  #container {
+    left: -50%;
   }
 }
