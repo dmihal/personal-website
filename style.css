@@ -7,6 +7,28 @@ html, body {
   height: 100%;
 }
 
+header {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 500;
+  font-weight: 700;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  display: inline-block;
+  transform: scale(1);
+  margin: 0 10px;
+}
+header a:hover {
+  color: #EEE;
+  transform: scale(1.1);
+}
 
 #body {
   position: fixed;
@@ -15,12 +37,17 @@ html, body {
   left: 50px;
   right: 50px;
   z-index: 500;
+  background: #a59393ad;
+
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 #body::before, #body::after {
   content: '';
   display: block;
   height: 2px;
   background: #edddce;
+  margin: -12px 0;
 }
 
 #body::after {
@@ -30,12 +57,19 @@ html, body {
   right: 50px;
 }
 
-header {
-  background: #a59393ad;
+h1 {
   margin: 10px 20px;
   padding: 10px;
-  font-size: 52px;
+  font-size: 69px;
   text-align: center;
+  font-weight: 700;
+}
+
+#hero {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  opacity: 1;
 }
 
 #content {
@@ -46,8 +80,6 @@ header {
   left: 50px;
   right: 50px;
 }
-
-
 
 
 #background-container {
