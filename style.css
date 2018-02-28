@@ -39,6 +39,9 @@ header a:hover {
   z-index: 500;
   background: #a59393ad;
 
+  display: flex;
+  flex-direction: column;
+
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
@@ -58,11 +61,19 @@ header a:hover {
 }
 
 h1 {
-  margin: 10px 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 10px;
   font-size: 69px;
   text-align: center;
   font-weight: 700;
+  transition: all 0.5s;
+}
+
+.content h1 {
+  margin-top: 10px; 
 }
 
 #hero {
@@ -70,17 +81,84 @@ h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: 24px;
   opacity: 1;
+  transition: all 0.5s;
+}
+
+.content #hero {
+  opacity: 0;
+  margin-top: -20px;
 }
 
 #content {
   overflow: auto;
-  position: fixed;
-  bottom: 50px;
-  top: 180px;
-  left: 50px;
-  right: 50px;
+  flex-grow: 1;
+  transition: all 0.5s;
+  white-space: nowrap;
 }
 
+.content #content {
+  top: 150px;
+}
+
+#intro {
+  transition: all 0.5s;
+  opacity: 1;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+.content #intro {
+  opacity: 0;
+}
+
+.page {
+  transition: all 0.5s;
+  opacity: 0;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  margin-left: -100%;
+}
+
+.career #career {
+  opacity: 1;
+}
+
+.projects #projects {
+  opacity: 1;
+}
+
+.leftCol, .rightCol {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+.leftCol {
+  text-align: right;
+}
+.rightCol {
+}
+
+h4 {
+  margin-top: 0;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 48px;
+  }
+  #hero {
+    font-size: 16px;
+  }
+}
+
+
+/* Background */
 
 #background-container {
   height: 100%;
@@ -88,11 +166,6 @@ h1 {
 }
 
 #background {
-  /*position: absolute;
-  top: -100%;
-  bottom: -100%;
-  right: -100%;
-  left: -100%;*/
   height: 100%;
   width: 100%;
   overflow: hidden;
