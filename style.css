@@ -157,6 +157,19 @@ h4 {
   }
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 500;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 30px;
+}
+footer a {
+  color: white;
+}
+
 
 /* Background */
 
